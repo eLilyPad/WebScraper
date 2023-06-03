@@ -28,6 +28,8 @@ class BBC:
                     
                     title = story.get_text()
                     link = story.get("href")
+                    if link[0] == '/':
+                        link = URL + link
                     tag = metadata[0].get_text()
                     # print(
                     #     f"""
