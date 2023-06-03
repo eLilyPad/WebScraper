@@ -29,7 +29,7 @@ def stories():
             response["success"] = True
             response["total_stories"] = len(rec)
     except TypeError:
-        print("no stories was retrieved from ")
+        print("no stories was retrieved from database")
 
     return jsonify(response), 200
 

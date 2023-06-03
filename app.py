@@ -3,7 +3,7 @@ import database as db
 from scraper import BBC
 
 
-def send_to_db(stories):
+def send_to_db(stories: list):
     for s in stories:
         title = s.get("title")
         link = s.get("link")
@@ -11,14 +11,14 @@ def send_to_db(stories):
 
         db.send_title(title)
 
-        id = db.get_story_id(title)
+        # id = db.get_story_id(title)
 
-        db.send_tag(tag)
+        # db.send_tag(tag)
 
-        tag_id = db.get_tag_id(tag)
+        # tag_id = db.get_tag_id(tag)
 
-        db.send_link(id, link)
-        db.send_metadata(id, tag_id)
+        # db.send_link(id, link)
+        # db.send_metadata(id, tag_id)
 
 
 def main():
